@@ -1,0 +1,70 @@
+body {
+  display: flex;// Modèle de disposition flexible
+  flex-direction: column;// Aligne les éléments verticalement
+  justify-content: center;// Centre les éléments horizontalemen
+  align-items: center;// Centre les éléments verticalement
+  
+  .card {
+    display: flex;// Modèle de disposition flexible
+    flex-direction: column;// Aligne les éléments verticalement
+    align-items: center;// Centre les éléments verticalement
+    position: relative;// Positionnement par rapport à un autre élément
+    
+    .image {
+      img {
+        opacity: 1;// Visibilité de l'élément
+        transition: opacity 0.5s;// Transition en douceur pour modifier l'opacité
+      }
+    }
+    
+    .card-text {
+      position: absolute;// Positionnement par rapport au premier élément
+      bottom: 0;// Place l'élément en bas de la carte
+      transform: translateY(100%);// Déplace l'élément verticalement à 100% de sa taille d'origine
+      opacity: 0;// Rend l'élément complètement transparent
+      transition: all 0.5s;// Applique une transition en douceur pour tous les changements de propriété
+      background-color: white;// Définit la couleur de fond de l'élément à blanc
+      text-align: left;// Aligne le texte à gauche
+      width: 100%;// Définit la largeur de l'élément à 100%
+      box-sizing: border-box;// Inclus la largeur et longueur de l'élément
+      height: 80%;           // Définit la hauteur de l'élément à 80%
+    }                         // Ne se rajoute pas à la taille
+    
+    &:hover {           // Les sélecteurs imbriqués ciblent l'image à l'intérieur
+      .image img {      // de l'élément pour ne pas appliquer l'effet survol
+        opacity: 0.5;   // sur les autes éléments à l'intérieur
+      }     // Rend l'image partiellement visible  
+      
+      .card-text {
+        transform: translateY(20%);// Déplace l'élément verticalement à 20% de sa taille d'origine
+        opacity: 1; // Rend l'élément complètement visible
+      }
+      
+      .logo-red {
+        top: -30px;
+      }// Définit la position de l'élément à 30 pixels au-dessus du bord supérieur de son conteneur parent
+    }
+    
+    .logo-red {
+      position: absolute;// Positionnement de l'élément par rapport au conteneur parent
+      top: -20px;// Définit la position de l'élément à 20 pixels au-dessus du bord supérieur du conteneur parent
+      left: 11%;// Définit la position horizontale de l'élément en pourcentage de la largeur du conteneur parent
+      transform: translateX(-50%);// Déplace l'élément de 50% de sa propre largeur vers la gauche (pour le centrer horizontalement)
+      transition: all 0.5s;// Ajoute une transition d'animation de 0.5 seconde lors de tout changement d'état de cet élément
+    }
+  }
+  
+  .red {
+    font-size: 25px;// Définit la taille de police à 25 pixels
+    font-style: sans-serif;// Définit le style de police à sans-serif
+    color: rgb(218, 114, 106);// Définit la couleur du texte en utilisant le code RGB
+  }
+  p, h1 {
+    margin: 20px;// Définit la marge de l'élément à 20 pixels
+    font-size: 20px;// Définit la taille de police de l'élément à 20 pixels
+  }
+
+  .grey {
+    color: rgb(138, 136, 136);// Définit la couleur du texte en utilisant le code RGB
+  }
+}
