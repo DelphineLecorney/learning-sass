@@ -1,17 +1,13 @@
-body {
-  background-image: url(../pictures/ImageExercice.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-align: center;
-  height: 100%;
-}
-
 .image-container {
+  background-image: url(../pictures/ImageExercice.jpg);
+  background-position: center center;
+  text-align: left;
+  background-repeat: no-repeat;
   position: relative;
   display: inline-block;
   margin: 100px auto;
   overflow: hidden;
-  width: 500px;
+  width: 350px;
   height: 500px;
 }
 
@@ -27,8 +23,8 @@ body {
 
 .text {
   position: relative;
-  width: 500px;
-  height: 380px;
+  width: 350px;
+  height: 260px;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -39,7 +35,7 @@ body {
 
 .image-container:hover .text {
   background-color: #fff;
-  top: 60%;
+  top: 50%;
   opacity: 1;
 }
 
